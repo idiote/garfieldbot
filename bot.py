@@ -80,9 +80,17 @@ async def on_message(message):
                         "garftrivia - sends a random fact about Garfield", 
                         "odiekick - sends a gif of Garfield kicking Odie"
                        ]
-        
-        await message.channel.send()
 
+        helpmessage = "Garfield Bot 1.0 Commands\n```"
+
+        for i in range(len(helpcommands)):
+            helpmessage += helpcommands[i]
+            helpmessage += "\n \n"
+
+        helpmessage += "```"
+        
+        await message.channel.send(helpmessage)
+        
     if "odiekick" in message.content.lower():
         response = "http://66.media.tumblr.com/tumblr_lq5hk354UG1qbqwr6o1_400.gif"
         await message.channel.send(response)
