@@ -95,13 +95,13 @@ async def on_message(message):
     if message.content.lower() == "odiekick":
         response = "http://66.media.tumblr.com/tumblr_lq5hk354UG1qbqwr6o1_400.gif"
         await message.channel.send(response)
-        
-    if message.content.lower() == "garflinks":
+    
+    if "garflinks" in message.content.lower():
         links = ["official website - https://garfield.com/", 
-                 "official twitter - https://twitter.com/garfield", 
-                 "offical youtube account - https://www.youtube.com/OfficialGarfield", 
-                 "offical japanese twitter account - https://twitter.com/garfield_jp",
-                 "official GarfieldEATS website - https://garfieldeats.com/"
+                        "official twitter - https://twitter.com/garfield", 
+                        "offical youtube account - https://www.youtube.com/OfficialGarfield", 
+                        "offical japanese twitter account - https://twitter.com/garfield_jp",
+                        "official GarfieldEATS website - https://garfieldeats.com/"
                        ]
 
         links = "Important garfield links \n```"
@@ -111,7 +111,7 @@ async def on_message(message):
             links += "\n \n"
 
         links += "```"
-        await message.channel.send(links)
+
 
 
 
