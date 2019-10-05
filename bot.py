@@ -72,5 +72,9 @@ async def on_message(message):
     if message.content.lower() == "garftrivia":
         trivias = ["Trivia fact #1: Garfield is an orange cat"]
         await message.channel.send(random.choice(trivias))
+    
+    if "odiekick" in message.content.lower():
+        response = "http://66.media.tumblr.com/tumblr_lq5hk354UG1qbqwr6o1_400.gif"
+        await message.channel.send(response)
 
 bot.run(TOKEN)
