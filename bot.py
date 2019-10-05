@@ -78,7 +78,8 @@ async def on_message(message):
                    "Trivia fact # 6: Odie was originally owned by Lyman, before being given to Jon.", 
                    "Trivia fact #7: Garfield has a teddy bear named Pooky.", 
                    "Trivia fact #8: Liz is a vet.", 
-                   "Trivia fact #9: In 'Long Lost Lyman,' an episode of The Garfield Show, it’s revealed that Lyman became a wildlife photographer.]
+                   "Trivia fact #9: In 'Long Lost Lyman,' an episode of The Garfield Show, it’s revealed that Lyman became a wildlife photographer."]
+        
         await message.channel.send(random.choice(trivias))
 
         
@@ -87,7 +88,7 @@ async def on_message(message):
                         "garfrandom - sends a random Garfield comic", 
                         "garftrivia - sends a random fact about Garfield", 
                         "odiekick - sends a gif of Garfield kicking Odie",
-                        "garflinks - important Garfield links"
+                        "garflinks - important garfield links"
                        ]
 
         helpmessage = "Garfield Bot 1.0 Commands\n```"
