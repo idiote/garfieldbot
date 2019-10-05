@@ -110,7 +110,8 @@ async def on_message(message):
                  "official twitter - https://twitter.com/garfield", 
                  "offical youtube account - https://www.youtube.com/OfficialGarfield", 
                  "offical japanese twitter account - https://twitter.com/garfield_jp",
-                 "official GarfieldEATS website - https://garfieldeats.com/"
+                 "official GarfieldEATS website - https://garfieldeats.com/", 
+                 "GarfBot's GitHub source code - https://github.com/cookie-cuttr/garfieldbot"
                        ]
 
         send = "Important garfield links \n```"
