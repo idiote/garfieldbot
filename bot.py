@@ -92,11 +92,11 @@ async def on_message(message):
         
         await message.channel.send(helpmessage)
         
-    if message.content.lower == "odiekick":
+    if message.content.lower() == "odiekick":
         response = "http://66.media.tumblr.com/tumblr_lq5hk354UG1qbqwr6o1_400.gif"
         await message.channel.send(response)
         
-    if "garflinks" in message.content.lower():
+    if message.content.lower() == "garflinks":
         links = ["official website - https://garfield.com/", 
                  "official twitter - https://twitter.com/garfield", 
                  "offical youtube account - https://www.youtube.com/OfficialGarfield", 
