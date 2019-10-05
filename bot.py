@@ -70,7 +70,7 @@ async def on_message(message):
         await message.channel.send(garfFileName)
         
     if message.content.lower() == "garftrivia":
-        trivias = ["Trivia fact #1: Garfield is an orange cat"]
+        trivias = ["Trivia fact #1: Garfield is an orange cat", "Trivia fact #2: Garfield was first published on June 19th 1978", "Trivia fact #3: GarfieldEATS is the offical Garfield Restauraunt and food delivery service.", "Trivia fact #4: Jon Arbuckle works as a cartoonist."]
         await message.channel.send(random.choice(trivias))
 
 bot.run(TOKEN)
