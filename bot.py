@@ -72,9 +72,20 @@ async def on_message(message):
     if message.content.lower() == "garftrivia":
         trivias = ["Trivia fact #1: Garfield is an orange cat", "Trivia fact #2: Garfield was first published on June 19th 1978", "Trivia fact #3: GarfieldEATS is the offical Garfield Restauraunt and food delivery service.", "Trivia fact #4: Jon Arbuckle works as a cartoonist."]
         await message.channel.send(random.choice(trivias))
-    
+
+        
+    if message.content.lower() == "garfhelp":
+        helpcommands = ["garfdaily - sends the daily Garfield comic", 
+                        "garfrandom - sends a random Garfield comic", 
+                        "garftrivia - sends a random fact about Garfield", 
+                        "odiekick - sends a gif of Garfield kicking Odie"
+                       ]
+        
+        await message.channel.send()
+
     if "odiekick" in message.content.lower():
         response = "http://66.media.tumblr.com/tumblr_lq5hk354UG1qbqwr6o1_400.gif"
         await message.channel.send(response)
+
 
 bot.run(TOKEN)
