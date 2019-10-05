@@ -91,7 +91,7 @@ async def on_message(message):
         
         await message.channel.send(helpmessage)
         
-    if "odiekick" in message.content.lower():
+    if message.content.lower() == "odiekick":
         response = "http://66.media.tumblr.com/tumblr_lq5hk354UG1qbqwr6o1_400.gif"
         await message.channel.send(response)
 
