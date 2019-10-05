@@ -121,6 +121,10 @@ async def on_message(message):
 
         send += "```"
         await message.channel.send(send)
+        
+    if "monday" in message.content.lower() or "mondays" in message.content.lower():
+        response = "I **HATE** mondays!"
+        await message.channel.send(response)
 
 
 
