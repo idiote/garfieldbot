@@ -78,7 +78,8 @@ async def on_message(message):
         helpcommands = ["garfdaily - sends the daily Garfield comic", 
                         "garfrandom - sends a random Garfield comic", 
                         "garftrivia - sends a random fact about Garfield", 
-                        "odiekick - sends a gif of Garfield kicking Odie"
+                        "odiekick - sends a gif of Garfield kicking Odie",
+                        "garflinks - important garfield links"
                        ]
 
         helpmessage = "Garfield Bot 1.0 Commands\n```"
@@ -91,9 +92,26 @@ async def on_message(message):
         
         await message.channel.send(helpmessage)
         
-    if message.content.lower() == "odiekick":
+    if "odiekick" in message.content.lower():
         response = "http://66.media.tumblr.com/tumblr_lq5hk354UG1qbqwr6o1_400.gif"
         await message.channel.send(response)
+        
+    if "garflinks" in message.content.lower():
+        links = ["official website - https://garfield.com/", 
+                        "official twitter - https://twitter.com/garfield", 
+                        "offical youtube account - https://www.youtube.com/OfficialGarfield", 
+                        "offical japanese twitter account - https://twitter.com/garfield_jp",
+                        "official GarfieldEATS website - https://garfieldeats.com/"
+                       ]
+
+        links = "Important garfield links \n```"
+
+        for i in range(len(links)):
+            links += links[i]
+            links += "\n \n"
+
+        links += "```"
+
 
 
 bot.run(TOKEN)
