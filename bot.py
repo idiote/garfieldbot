@@ -72,5 +72,8 @@ async def on_message(message):
     if message.content.lower() == "garftrivia":
         trivias = ["Trivia fact #1: Garfield is an orange cat"]
         await message.channel.send(random.choice(trivias))
+        
+    if message.content.lower() == "garfhelp":
+        await message.channel.send("Commands for Garfield Bot 1.0\n```garfhelp - sends a list of commands\ngarfdaily - sends the comic of the day\ngarfrandom - sends a random comic\ngarftrivia - sends a fact about garfield```")
 
 bot.run(TOKEN)
