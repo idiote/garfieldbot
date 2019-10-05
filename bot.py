@@ -54,13 +54,14 @@ async def on_message(message):
         else:
             day = localtime.tm_mday
             
-        randomYear = random.randint(1979, localtime.tm_year - 1)
+        randomYear = str(random.randint(1979, localtime.tm_year - 1))
         randomMonth = random.randint(1,12)
-        if randomMonth = 2:
+        if randomMonth == 2:
             daycap = 28
-        elif randomMonth = 4 or randomMonth = 6 or randomMonth = 9 or randomMonth = 11:
+        elif randomMonth == 4 or randomMonth == 6 or randomMonth == 9 or randomMonth == 11:
             daycap = 30
-        randomDay = random.randint(1,daycap)
+        randomDay = str(random.randint(1,daycap))
+        randomMonth = str(randomMonth)        
         
         garfFileName = "https://d1ejxu6vysztl5.cloudfront.net/comics/garfield/"+randomYear+"/"+randomYear+"-"+randomMonth+"-"+randomDay+".gif"
 
