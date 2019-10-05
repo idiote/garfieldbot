@@ -70,7 +70,15 @@ async def on_message(message):
         await message.channel.send(garfFileName)
         
     if message.content.lower() == "garftrivia":
-        trivias = ["Trivia fact #1: Garfield is an orange cat", "Trivia fact #2: Garfield was first published on June 19th 1978", "Trivia fact #3: GarfieldEATS is the offical Garfield Restauraunt and food delivery service.", "Trivia fact #4: Jon Arbuckle works as a cartoonist."]
+        trivias = ["Trivia fact #1: Garfield is an orange cat", 
+                   "Trivia fact #2: Garfield was first published on June 19th 1978", 
+                   "Trivia fact #3: GarfieldEATS is the offical Garfield Restauraunt and food delivery service.", 
+                   "Trivia fact #4: Jon Arbuckle works as a cartoonist.", 
+                   "Trivia fact 5#: Nermal is male.", 
+                   "Trivia fact # 6: Odie was originally owned by Lyman, before being given to Jon.", 
+                   "Trivia fact #7: Garfield has a teddy bear named Pooky.", 
+                   "Trivia fact #8: Liz is a vet.", 
+                   "Trivia fact #9: In 'Long Lost Lyman,' an episode of The Garfield Show, it’s revealed that Lyman became a wildlife photographer.]
         await message.channel.send(random.choice(trivias))
 
         
