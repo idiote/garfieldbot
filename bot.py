@@ -78,7 +78,12 @@ async def on_message(message):
                    "Trivia fact # 6: Odie was originally owned by Lyman, before being given to Jon.", 
                    "Trivia fact #7: Garfield has a teddy bear named Pooky.", 
                    "Trivia fact #8: Liz is a vet.", 
-                   "Trivia fact #9: In 'Long Lost Lyman,' an episode of The Garfield Show, it’s revealed that Lyman became a wildlife photographer."]
+                   "Trivia fact #9: In 'Long Lost Lyman,' an episode of The Garfield Show, it’s revealed that Lyman became a wildlife photographer.",
+                   "Trivia fact #10: Despite Garfield drinking his fair share of coffee, it is actually very dangerous for cats, dogs  most small pets to have caffeine.",
+                   "Trivia fact #11: On the February 2nd, 2013 comic strip, Garfield built a scale model replica of the parthenon, only to eat it later as it was made of chocolate.",
+                   "Trivia fact #12: According to the christmas eve 2018 comic, Santa is real in the Garfield universe.",
+                   "Trivia fact #13: Jons Father, Mother and Brother all work on a farm together."
+                  ]
         
         await message.channel.send(random.choice(trivias))
 
