@@ -3,9 +3,11 @@ import os
 import time
 import discord
 import random
-
+from discord.ext import commands
 
 TOKEN = ("Sorry, can't tell you that!")
+
+bot = commands.Bot()
 
 @bot.event
 async def on_ready():
