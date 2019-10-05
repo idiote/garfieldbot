@@ -38,7 +38,6 @@ async def on_message(message):
         localtime = time.gmtime()
         if len(str(localtime.tm_mday)) == 1:
             day = "0" + str(localtime.tm_mday)
-            print (day)
         else:
             day  = localtime.tm_mday
 
@@ -46,6 +45,25 @@ async def on_message(message):
 
         await message.channel.send(garfFileName)
         print ("A user requested this comic:", garfFileName)
+    
+    if message.content.lower() == "garfrandom":
+        daycap = 31
+        localtime = time.gmtime()
+        if len(str(localtime.tm_mday)) == 1:
+            day = "0" + str(localtime.tm_mday)
+        else:
+            day = localtime.tm_mday
+            
+        randomYear = str(random.randint(1979, localtime.tm_year - 1))
+        randomMonth = random.randint(1,12)
+        if randomMonth == 2:
+            daycap = 28
+        elif randomMonth == 4 or randomMonth == 6 or randomMonth == 9 or randomMonth == 11:
+            daycap = 30
+        randomDay = str(random.randint(1,daycap))
+        randomMonth = str(randomMonth)        
+        
+        garfFileName = "https://d1ejxu6vysztl5.cloudfront.net/comics/garfield/"+randomYear+"/"+randomYear+"-"+randomMonth+"-"+randomDay+".gif"
 
     if message.content.lower() == "garftrivia":
         trivias = ["Trivia fact #1: Garfield is an orange cat"]
