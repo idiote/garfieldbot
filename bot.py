@@ -49,10 +49,6 @@ async def on_message(message):
     if message.content.lower() == "garfrandom":
         daycap = 31
         localtime = time.gmtime()
-        if len(str(localtime.tm_mday)) == 1:
-            day = "0" + str(localtime.tm_mday)
-        else:
-            day = localtime.tm_mday
             
         randomYear = str(random.randint(1979, localtime.tm_year - 1))
         randomMonth = random.randint(1,12)
@@ -61,10 +57,18 @@ async def on_message(message):
         elif randomMonth == 4 or randomMonth == 6 or randomMonth == 9 or randomMonth == 11:
             daycap = 30
         randomDay = str(random.randint(1,daycap))
-        randomMonth = str(randomMonth)        
+        
+        if len(randomDay) == 1:
+            randomDay = "0" + randomDay
+            
+        randomMonth = str(randomMonth)
+
+        if len(randomMonth) == 1:
+            randomMonth = "0" + randomMonth
         
         garfFileName = "https://d1ejxu6vysztl5.cloudfront.net/comics/garfield/"+randomYear+"/"+randomYear+"-"+randomMonth+"-"+randomDay+".gif"
-
+        await message.channel.send(garfFileName)
+        
     if message.content.lower() == "garftrivia":
         trivias = ["Trivia fact #1: Garfield is an orange cat"]
         await message.channel.send(random.choice(trivias))
