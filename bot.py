@@ -79,7 +79,7 @@ async def on_message(message):
                         "garfrandom - sends a random Garfield comic", 
                         "garftrivia - sends a random fact about Garfield", 
                         "odiekick - sends a gif of Garfield kicking Odie",
-                        "garflinks - important garfield links"
+                        "garflinks - important Garfield links"
                        ]
 
         helpmessage = "Garfield Bot 1.0 Commands\n```"
@@ -104,14 +104,14 @@ async def on_message(message):
                  "official GarfieldEATS website - https://garfieldeats.com/"
                        ]
 
-        links = "Important garfield links \n```"
+        send = "Important garfield links \n```"
 
         for i in range(len(links)):
-            links += links[i]
-            links += "\n \n"
+            send += links[i]
+            send += "\n \n"
 
-        links += "```"
-        await message.channel.send(links)
+        send += "```"
+        await message.channel.send(send)
 
 
 
