@@ -3,6 +3,10 @@ import time
 import discord
 import random
 
+character = ['Garfield', 'Jon', 'Odie', 'Liz', 'Lyman', 'A spider']
+verb = ['kills', 'belittles', 'meets', 'eats', 'hurts', 'yells at', 'hugs', 'kisses', 'befriends', 'uses', 'talks to', 'jokes about', 'wants', 'reads', 'beats up', 'screams at', 'is scared of', 'watches', 'destroys']
+noun = ['Odie', 'Jon', 'a spider', 'Garfield', 'Liz', 'you', 'lasagna', 'an accordion', 'Pooky', 'Lyman', 'a comic', 'a dog', 'money', 'the tv', 'a book', 'the window', 'a car', 'him/herself', 'food']
+
 
 
 TOKEN = "Can't tell you that"
@@ -93,7 +97,8 @@ async def on_message(message):
                         "garfrandom - sends a random Garfield comic", 
                         "garftrivia - sends a random fact about Garfield", 
                         "odiekick - sends a gif of Garfield kicking Odie",
-                        "garflinks - important garfield links"
+                        "garflinks - important garfield links",
+                        "garfprompt - comes up with a random garfield based prompt"
                        ]
 
         helpmessage = "Garfield Bot 1.0 Commands\n```"
@@ -130,6 +135,13 @@ async def on_message(message):
         
     if "monday" in message.content.lower():
         await message.channel.send("I **HATE** mondays!")
+        
+    if message.content.lower() == "garfprompt":
+        verbused = verb[random.randint(0, len(verb)-1)]
+        nounused = noun[random.randint(0, len(noun)-1)]
+        charused = character[random.randint(0, len(character)-1)]
+        response = charused + " " + verbused + " " nounused
+        await message.channel.send(response)
 
 
 
