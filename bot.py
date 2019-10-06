@@ -91,10 +91,10 @@ async def on_message(message):
                 garfFileName = "https://d1ejxu6vysztl5.cloudfront.net/comics/garfield/"+randomYear+"/"+randomYear+"-"+randomMonth+"-"+randomDay+".gif"
                 await message.channel.send(garfFileName)
                 
-        if message.content[4:10] == "trivia":
+        elif message.content[4:10] == "trivia":
                 await message.channel.send(random.choice(trivias))
                 
-        if message.content[4:8] == "help":
+        elif message.content[4:8] == "help":
                 helpmessage = "Garfield Bot 1.0 Commands\n```"
 
                 for i in range(len(helpcommands)):
@@ -104,7 +104,7 @@ async def on_message(message):
                 helpmessage += "```"
 
                 await message.channel.send(helpmessage)  
-        if message.content[4:9].lower() == "links":
+        elif message.content[4:9].lower() == "links":
                 send = "Important garfield links \n```"
 
                 for i in range(len(links)):
@@ -114,12 +114,15 @@ async def on_message(message):
                 send += "```"
                 await message.channel.send(send)
                 
-        if message.content[4:10].lower() == "prompt":
+        elif message.content[4:10].lower() == "prompt":
                 verbused = verb[random.randint(0, len(verb)-1)]
                 nounused = noun[random.randint(0, len(noun)-1)]
                 charused = character[random.randint(0, len(character)-1)]
                 response = charused + " " + verbused + " " + nounused
                 await message.channel.send(response)
+                
+        elif message.content[4:9].lower() == "comic":
+                await message.channel.send("This feature isn't ready yet")
                 
 
     if "lasagna" in message.content.lower() or "lasagne" in message.content.lower():
