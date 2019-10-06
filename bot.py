@@ -17,9 +17,7 @@ noun = ['Odie', 'Jon', 'a spider', 'Garfield', 'Liz', 'you', 'lasagna', 'an acco
 #on bootup (do not change!)
 @bot.event
 async def on_ready():
-    print(
-        f'{bot.user} is connected to discord!'
-    )
+    print(f'{bot.user} is connected to discord!')
 
 #message checker    
 @bot.event
@@ -39,7 +37,30 @@ async def on_message(message):
                 garfFileName = "https://d1ejxu6vysztl5.cloudfront.net/comics/garfield/2019/"+str(localtime.tm_year)+"-"+str(localtime.tm_mon)+"-"+day+".gif"
 
                 await message.channel.send(garfFileName)
-                print ("A user requested this comic:", garfFileName)
+                print ("A user requested the daily comic")
+        
+        elif message.content[4:10] == "random":
+                daycap = 31
+                localtime = time.gmtime()
+
+                randomYear = str(random.randint(1979, localtime.tm_year - 1))
+                randomMonth = random.randint(1,12)
+                if randomMonth == 2:
+                    daycap = 28
+                elif randomMonth == 4 or randomMonth == 6 or randomMonth == 9 or randomMonth == 11:
+                    daycap = 30
+                randomDay = str(random.randint(1,daycap))
+
+                if len(randomDay) == 1:
+                    randomDay = "0" + randomDay
+
+                randomMonth = str(randomMonth)
+
+                if len(randomMonth) == 1:
+                    randomMonth = "0" + randomMonth
+
+                garfFileName = "https://d1ejxu6vysztl5.cloudfront.net/comics/garfield/"+randomYear+"/"+randomYear+"-"+randomMonth+"-"+randomDay+".gif"
+                await message.channel.send(garfFileName)
 
     if "lasagna" in message.content.lower() or "lasagne" in message.content.lower():
         response = "did somebody say lasagna?"
