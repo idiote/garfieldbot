@@ -28,7 +28,8 @@ async def on_message(message):
         return
     
     if message.content[0:5].lower() == "garf":
-        print ("works")
+        if message.content[5:10].lower() == "daily":
+                print ("works")
 
     if "lasagna" in message.content.lower() or "lasagne" in message.content.lower():
         response = "did somebody say lasagna?"
