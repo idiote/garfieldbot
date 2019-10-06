@@ -8,11 +8,12 @@ TOKEN = "Can't tell you that"
 bot = commands.Bot(command_prefix="garf")
 
 #garfprompt lists (feel free to add more characters, actions or nouns)
-character = ['Garfield', 'Jon', 'Odie', 'Liz', 'Lyman', 'A spider']
+character = ['Garfield', 'Jon', 'Odie', 'Liz', 'Lyman', 'A spider', 'The window']
 verb = ['kills', 'belittles', 'meets', 'eats', 'hurts', 'yells at', 'hugs', 'kisses', 'befriends', 
         'uses', 'talks to', 'jokes about', 'wants', 'reads', 'beats up', 'screams at', 'is scared of', 'watches', 'destroys']
 noun = ['Odie', 'Jon', 'a spider', 'Garfield', 'Liz', 'you', 'lasagna', 'an accordion', 'Pooky', 
-        'Lyman', 'a comic', 'a dog', 'money', 'the tv', 'a book', 'the window', 'a car', 'him/herself', 'food']
+        'Lyman', 'a comic', 'a dog', 'money', 'the tv', 'a book', 'a car', 'him/herself', 'food']
+
 trivias = ["Trivia fact #1: Garfield is an orange cat", 
            "Trivia fact #2: Garfield was first published on June 19th 1978", 
            "Trivia fact #3: GarfieldEATS is the offical Garfield Restauraunt and food delivery service.", 
@@ -27,6 +28,7 @@ trivias = ["Trivia fact #1: Garfield is an orange cat",
            "Trivia fact #12: According to the christmas eve 2018 comic, Santa is real in the Garfield universe.",
            "Trivia fact #13: Jons Father, Mother and Brother all work on a farm together."
            ]
+
 links = ["official website - https://garfield.com/", 
          "official twitter - https://twitter.com/garfield", 
          "offical youtube account - https://www.youtube.com/OfficialGarfield", 
