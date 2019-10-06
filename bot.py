@@ -1,38 +1,34 @@
+#imports and setup (do not change!)
 import os
 import time
 import discord
 import random
-
-character = ['Garfield', 'Jon', 'Odie', 'Liz', 'Lyman', 'A spider']
-verb = ['kills', 'belittles', 'meets', 'eats', 'hurts', 'yells at', 'hugs', 'kisses', 'befriends', 'uses', 'talks to', 'jokes about', 'wants', 'reads', 'beats up', 'screams at', 'is scared of', 'watches', 'destroys']
-noun = ['Odie', 'Jon', 'a spider', 'Garfield', 'Liz', 'you', 'lasagna', 'an accordion', 'Pooky', 'Lyman', 'a comic', 'a dog', 'money', 'the tv', 'a book', 'the window', 'a car', 'him/herself', 'food']
-
-
-
-TOKEN = "Can't tell you that"
-
 from discord.ext import commands
+TOKEN = "Can't tell you that"
+bot = commands.Bot(command_prefix="garf")
 
-bot = commands.Bot(command_prefix="!")
+#garfprompt lists (feel free to add more characters, actions or nouns)
+character = ['Garfield', 'Jon', 'Odie', 'Liz', 'Lyman', 'A spider']
+verb = ['kills', 'belittles', 'meets', 'eats', 'hurts', 'yells at', 'hugs', 'kisses', 'befriends', 
+        'uses', 'talks to', 'jokes about', 'wants', 'reads', 'beats up', 'screams at', 'is scared of', 'watches', 'destroys']
+noun = ['Odie', 'Jon', 'a spider', 'Garfield', 'Liz', 'you', 'lasagna', 'an accordion', 'Pooky', 
+        'Lyman', 'a comic', 'a dog', 'money', 'the tv', 'a book', 'the window', 'a car', 'him/herself', 'food']
 
+#on bootup (do not change!)
 @bot.event
 async def on_ready():
     print(
         f'{bot.user} is connected to discord!'
     )
 
-@bot.event
-async def on_member_join(member):
-    await member.create_dm()
-    await member.dm_channel.send(
-        f"Hi {member.name}, welcome to the server!"
-    )
-
+#message checker    
 @bot.event
 async def on_message(message):
     if message.author == bot.user:
         return
-
+    
+    if message.content[0:5].lower() == "garf":
+        print ("works")
 
     if "lasagna" in message.content.lower() or "lasagne" in message.content.lower():
         response = "did somebody say lasagna?"
