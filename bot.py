@@ -42,7 +42,8 @@ helpcommands = ["garfdaily - sends the daily Garfield comic",
                 "garftrivia - sends a random fact about Garfield", 
                 "odiekick - sends a gif of Garfield kicking Odie",
                 "garflinks - important garfield links",
-                "garfprompt - comes up with a random garfield based prompt"
+                "garfprompt - comes up with a random garfield based prompt",
+                "garfcomic - sends a comic from a specific date, in the format YYYY MM DD"
                 ]
 
 #on bootup (do not change!)
