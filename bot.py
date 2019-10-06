@@ -140,7 +140,7 @@ async def on_message(message):
         verbused = verb[random.randint(0, len(verb)-1)]
         nounused = noun[random.randint(0, len(noun)-1)]
         charused = character[random.randint(0, len(character)-1)]
-        response = charused verbused nounused
+        response = charused + " " + verbused + " " nounused
         await message.channel.send(response)
 
 
