@@ -4,8 +4,7 @@ import time
 import discord
 import random
 from discord.ext import commands
-def main():
-        TOKEN = "Can't tell you that"
+def main(TOKEN):
         bot = commands.Bot(command_prefix="garf")
 
         #garfprompt lists (feel free to add more characters, actions or nouns)
