@@ -29,6 +29,7 @@ trivias = ["Trivia fact #1: Garfield is an orange cat",
            "Trivia fact #13: Jons Father, Mother and Brother all work on a farm together."
            "Trivia fact #14: Garfield always 'speeks' in thought bubbles."
            "Trivia fact #15: Garfield can regularly be seen kicking odie."
+           "Trivia fact #16: According to the April 24th 2001 comic, Jon was stuck up a tree during the ages of 7 and 8"
            ]
 
 links = ["official website - https://garfield.com/", 
