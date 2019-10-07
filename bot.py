@@ -27,7 +27,7 @@ trivias = ["Trivia fact #1: Garfield is an orange cat",
            "Trivia fact #11: On the February 2nd, 2013 comic strip, Garfield built a scale model replica of the parthenon, only to eat it later as it was made of chocolate.",
            "Trivia fact #12: According to the christmas eve 2018 comic, Santa is real in the Garfield universe.",
            "Trivia fact #13: Jons Father, Mother and Brother all work on a farm together."
-           "Trivia fact #14: Garfield always 'speeks' in thought bubbles."
+           "Trivia fact #14: Garfield always 'speaks' in thought bubbles."
            "Trivia fact #15: Garfield can regularly be seen kicking odie."
            ]
 
