@@ -156,6 +156,8 @@ def main(TOKEN):
             if message.content.lower() == "odiekick":
                 response = "http://66.media.tumblr.com/tumblr_lq5hk354UG1qbqwr6o1_400.gif"
                 await message.channel.send(response)
+            if message.content.lower() == "jondance":
+                await message.channel.send("https://cdn.discordapp.com/attachments/626723796510048276/631217087662129192/image0.gif")
 
 
             if "monday" in message.content.lower():
