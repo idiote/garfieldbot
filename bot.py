@@ -150,3 +150,4 @@ def main(TOKEN):
                 await message.channel.send("I **HATE** mondays!")
 
         bot.run(TOKEN)
+main("shut the hell up")
