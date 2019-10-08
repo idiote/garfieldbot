@@ -45,7 +45,10 @@ def main(TOKEN):
                         "odiekick - sends a gif of Garfield kicking Odie",
                         "garflinks - important garfield links",
                         "garfprompt - comes up with a random garfield based prompt",
-                        "garfcomic - sends a comic from a specific date, in the format YYYY MM DD"
+                        "garfcomic - sends a comic from a specific date, in the format YYYY MM DD",
+                        "garffull - sends a gif of garfield being full",
+                        "garfeat - sends a gif of garfield eating",
+                        "garfsleep - sends a gif of garfield falling asleep"
                         ]
 
         #on bootup (do not change!)
@@ -136,6 +139,15 @@ def main(TOKEN):
                         else:
                                 url = "https://d1ejxu6vysztl5.cloudfront.net/comics/garfield/"+year+"/"+year+"-"+month+"-"+day+".gif"
                                 await message.channel.send(url)
+                                
+                elif message.content[4:9].lower() == "sleep":
+                        await message.channel.send("https://tenor.com/view/sleepy-tired-sleep-nap-garfield-gif-3552823")
+                elif message.content[4:8].lower() == "full":
+                        await message.channel.send("https://tenor.com/view/garfield-belly-full-stuffed-hungry-gif-12595013")
+                elif message.content[4:7].lower() == "eat":
+                        await message.channel.send("https://tenor.com/view/garfield-lasagna-eat-hungry-gif-3571569")
+             
+           
 
             if "lasagna" in message.content.lower() or "lasagne" in message.content.lower():
                 response = "did somebody say lasagna?"
