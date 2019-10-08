@@ -107,7 +107,7 @@ def main(TOKEN):
 
                         for i in range(len(helpcommands)):
                             helpmessage += helpcommands[i]
-                            helpmessage += "\n \n"
+                            helpmessage += "\n"
 
                         helpmessage += "```"
 
