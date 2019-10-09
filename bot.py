@@ -7,6 +7,8 @@ from discord.ext import commands
 TOKEN = ""
 bot = commands.Bot(command_prefix="garf")
 
+user = discord.User
+
 #garfprompt lists (feel free to add more characters, actions or nouns)
 character = ['Garfield', 'Jon', 'Odie', 'Liz', 'Lyman', 'A spider', 'The window']
 verb = ['kills', 'belittles', 'meets', 'eats', 'hurts', 'yells at', 'hugs', 'kisses', 'befriends', 
@@ -152,6 +154,12 @@ async def on_message(message):
 
     if "lasagna" in message.content.lower() or "lasagne" in message.content.lower():
         response = "did somebody say lasagna?"
+        await message.channel.send(response)
+        
+    if "nigger" in message.content.lower() or "nigga" in message.content.lower():
+        await time.sleep(0.1) 
+        message.delete
+        response = "sorry ", message.author, "we don't say the n-word here."
         await message.channel.send(response)
 
     if message.content.lower() == "odiekick":
